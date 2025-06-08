@@ -11,7 +11,7 @@
 <body>
     <div class="min-h-screen bg-slate-800">
         <audio autoplay loop>
-            <source src="musica.mp3" type="audio/mpeg">
+            <source src="">
         </audio>
     </div>
 </body>
