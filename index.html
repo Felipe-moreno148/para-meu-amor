@@ -1,10 +1,10 @@
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Para meu amor</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="shortcut icon" href="public/heart.png" type="image/x-icon" />
     <style>
       body {
@@ -30,12 +30,12 @@
         id="container"
         class="flex flex-col items-center justify-center text-center px-4 text-sm mb-2"
       ></div>
-      <img src="{{ asset('alpino.jpeg') }}" alt="alpino" class="m-2" />
+      <img src="./public/alpino.jpeg" alt="alpino" class="m-2" />
       <p class="text-slate-200 text-sm max-w-[286px]">
         Parabéns!!! Você ganhou uma barra de chocolate alpino! (Aproveite)
       </p>
       <img
-        src="{{ asset('amorzinho/foto23.JPG') }}"
+        src="./public/amorzinho/foto23.JPG"
         alt="foto nossa"
         class="max-h-[380px] border-4 border-purple-500 border-b-4 rounded-2xl m-4"
       />
@@ -54,9 +54,14 @@
         coração, saiba que você é o amor da minha vida, sem você eu não teria
         nada que eu tenho hoje. Te amo.
       </p>
+      <!-- Áudio -->
+      <audio id="musica" loop>
+        <source src="./public/planos.mp3" type="audio/mpeg" />
+        Seu navegador não suporta áudio HTML5.
+      </audio>
       <img
         id="imagemAleatoria"
-        src="{{ asset('amorzinho/foto1.jpg') }}"
+        src="./public/amorzinho/foto1.jpg"
         alt="Imagem aleatória"
         class="max-h-[380px] border-4 border-purple-500 border-b-4 rounded-2xl m-4"
       />
@@ -64,7 +69,7 @@
         (Recarregue a página para ver algo)
       </p>
       <p class="text-2xl text-slate-200">(Ignore a ena)</p>
-      <img src="{{ asset('ena-ref.png') }}" alt="ENA" class="max-h-[380px] m-4" />
+      <img src="./public/ena-ref.png" alt="ENA" class="max-h-[380px] m-4" />
       <p class="text-slate-200 max-w-[286px] m-4">
         Quando estou com você me sinto amarelo, você é mais linda que a lua,
         mais delicioa que o TURRON, você é oque eu pedi ao Grande Runas.
@@ -84,11 +89,6 @@
         class="m-6"
         allowfullscreen
       ></iframe>
-            <!-- Áudio -->
-      <audio id="musica" loop>
-        <source src="{{ asset('planos.mp3') }}" type="audio/mpeg" />
-        Seu navegador não suporta áudio HTML5.
-      </audio>
     </div>
     <script>
       const audio = document.getElementById("musica");
@@ -115,9 +115,9 @@
         // Monta o nome do arquivo, ex: "foto3.jpg"
         document.getElementById(
           "imagemAleatoria"
-        ).src = `amorzinho/foto${numeroAleatorio}.jpg`;
+        ).src = `./public/amorzinho/foto${numeroAleatorio}.jpg`;
         // Define o src da imagem
       };
-    </script>   
+    </script>
   </body>
 </html>
